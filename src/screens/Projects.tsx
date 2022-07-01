@@ -61,7 +61,7 @@ export const Projects = () => {
           animate="visible"
           initial="hidden"
           whileHover="hover"
-          
+          key={i}
         >
           <a id = 'project_list_a'style={{ color: "#0f0f0f",width:'auto',textTransform:'none'}} href={item} target="_blank" rel="noreferrer">
             {item}

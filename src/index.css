@@ -103,6 +103,7 @@ a{
   width: 170px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: bold;
+  cursor:pointer
 }
 #home_title{
   text-align:inherit
