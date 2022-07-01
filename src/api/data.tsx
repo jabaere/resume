@@ -8,7 +8,7 @@
     'Express js', 
     'Three js', 
     'React Three Fiber',
-    'React Three Drei', 'HTML5', 'CSS3', 'MUI', 'Graphql', 'Context-API', 'Redux', 'Next js']
+    'React Three Drei', 'HTML5', 'CSS3', 'MUI', 'Graphql', 'Context-API', 'Redux', 'Next js','Framer-motion']
 
    export const experience = [
       {
@@ -29,6 +29,12 @@
     ]
 
    export const projects = [
+    {
+      year:2022,
+      name:'Landing page my-resume',
+      techniques:'React/Typescript/Framer-motion',
+      source:'https://github.com/jabaere/resume'
+    },
       {
         year:2022,
         name:'web App for statements',

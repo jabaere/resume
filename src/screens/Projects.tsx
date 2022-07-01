@@ -32,13 +32,13 @@ export const Projects = () => {
         delay: i * 0.3,
       },
     }),
-    hidden: { opacity: 0, listStyleType: "none" },
+    hidden: { opacity: 0, listStyleType: "none",lineHeight:0.5 },
     hover: {
       scale: 1.2,
       originX: 0,
       backgroundColor: "#f8e112",
-      color: "black",
-      fontWeight: "bold",
+      color: "#fff",
+      
       transition: {
         type: "spring",
         stiffness: 200,

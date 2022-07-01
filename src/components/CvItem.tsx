@@ -37,8 +37,8 @@ export const CvItem: FunctionComponent<CvProps> = ({
           title: string;
           provider: string;
           professionalInterest: string;
-        }) => (
-          <div style={{ display: "flex", alignItems: "baseline" }}>
+        },key:number) => (
+          <div style={{ display: "flex", alignItems: "baseline" }} key={key}>
             <div>
               <p style={{ color: "#4D4D4D" }}>{item.year}</p>
             </div>

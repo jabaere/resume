@@ -26,7 +26,7 @@ export const About = () => {
     const aboutVariants = {
       visible: {
         opacity: 0.5,
-        color:'chartreuse',
+        color:'#DFFF00',
         letterSpacing:5,
         listStyleType:'none',
         transition: {
@@ -39,8 +39,7 @@ export const About = () => {
     const skillsVariants = {
       visible: {
         opacity: 0.5,
-        color:'chartreuse',
-        letterSpacing:5,
+        color:'#DFFF00',
         listStyleType:'none',
         transition: {
         delay: 2,
@@ -76,6 +75,7 @@ export const About = () => {
         animate='visible'
         variants={aboutVariants}
         id='present_word'
+        style={{letterSpacing:0.5}}
       >
          My profession is lawyer, but always in my life, I have felt that it was not what I want. <br/>
          I have always loved computers and was interested in programming. <br/>
@@ -86,12 +86,13 @@ export const About = () => {
       <div style={{display:'flex',flexDirection:'column'}}>
       <h3 style={{color:'yellow'}}>here are some techniques which I have touched on in</h3>
       <div id='skills_container'>
-      {skills.map(item=> (
+      {skills.map((item,key)=> (
         <motion.p
           initial='hidden'
           animate='visible'
           variants={skillsVariants}
-        >{item}</motion.p>
+          key={key}
+          >{item}</motion.p>
       ))}
       </div>
       </div>
