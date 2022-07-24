@@ -31,6 +31,12 @@
    export const projects = [
     {
       year:2022,
+      name:'Statistic app',
+      techniques:'NextJS/Typescript/CanvasJS/MUI',
+      source:'https://github.com/jabaere/statistic'
+    },
+    {
+      year:2022,
       name:'Landing page my-resume',
       techniques:'React/Typescript/Framer-motion',
       source:'https://github.com/jabaere/resume'
@@ -170,6 +176,7 @@
     ]
 
 export const links = [
+  'https://statistic-six.vercel.app/',
   'https://findfriends.vercel.app/',
   'https://snack.expo.dev/@jabaere/github.com-jabaere-longstayvilla',
   'https://jabaere.github.io/my-portfolio/',
