@@ -31,6 +31,12 @@
    export const projects = [
     {
       year:2022,
+      name:'AI-9 openai',
+      techniques:'NextJS/React Three Fiber/Framer-motion',
+      source:'https://github.com/jabaere/AI-9'
+    },
+    {
+      year:2022,
       name:'Statistic app',
       techniques:'NextJS/Typescript/CanvasJS/MUI',
       source:'https://github.com/jabaere/statistic'
@@ -190,6 +196,6 @@ export const links = [
   'https://jabaere.github.io/worldinfo/',
   'https://jabaere.github.io/carautousa/',
   'https://jabaere.github.io/quote/',
-  'https://jabaere.github.io/javascriptdocs/'
-
+  'https://jabaere.github.io/javascriptdocs/',
+  'https://ai9.vercel.app/'
 ]
