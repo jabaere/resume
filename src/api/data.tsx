@@ -182,6 +182,7 @@
     ]
 
 export const links = [
+  'https://ai9.vercel.app/',
   'https://statistic-six.vercel.app/',
   'https://findfriends.vercel.app/',
   'https://snack.expo.dev/@jabaere/github.com-jabaere-longstayvilla',
@@ -197,5 +198,4 @@ export const links = [
   'https://jabaere.github.io/carautousa/',
   'https://jabaere.github.io/quote/',
   'https://jabaere.github.io/javascriptdocs/',
-  'https://ai9.vercel.app/'
-]
+ ]
