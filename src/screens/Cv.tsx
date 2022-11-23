@@ -1,7 +1,6 @@
-import React from "react";
+import React,{useEffect,useContext,useRef} from "react";
 import { motion } from "framer-motion";
 import { BsFillHeartFill } from "react-icons/bs";
-import { Item } from "framer-motion/types/components/Reorder/Item";
 import {
   skills,
   experience,
@@ -12,7 +11,19 @@ import {
 } from "../api/data";
 import DownloadButton from "../components/downloadButton";
 import { CvItem } from "../components/CvItem";
+import ThemeContext from "../context/ThemeContext";
+
 export const Cv = () => {
+  const {resize} = useContext(ThemeContext);
+  const hideNumRef = useRef<HTMLDivElement>(null)
+  const hideAddr = useRef<HTMLDivElement>(null)
+  useEffect(()=> {
+   
+    if(resize && hideNumRef.current!==null && hideAddr.current!==null){
+      hideNumRef.current.innerHTML = 'blablabla'
+      hideAddr.current.innerHTML = 'blablabla'
+    }
+  },[resize])
   const container = {
     initial: {
       opacity: 0,
@@ -66,12 +77,12 @@ export const Cv = () => {
               }}
             >
               <h4 style={{ color: "#4D4D4D", marginBottom: 0 }}>contact</h4>
-              <p style={{ marginTop: 0, fontSize: 12 }}>
+              <p style={{ marginTop: 0, fontSize: 12 }} className='hide' ref={hideAddr}>
                 45a kavkasioni st <br />
                 Telavi, Kakheti <br />
                 Georgia
               </p>
-              <p style={{ fontSize: 12 }}> +995 (551) 10 40 11</p>
+              <p style={{ fontSize: 12 }} className='hide' ref={hideNumRef}> +995 (551) 10 40 11</p>
               <p style={{ fontSize: 12 }}>kobriashvili@gmail.com</p>
             </div>
 

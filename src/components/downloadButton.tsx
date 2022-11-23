@@ -21,7 +21,15 @@ const DownloadButton: FunctionComponent<ButtonProps> = ({
   };
   return (
     <motion.button
-      onClick={downloadFile}
+      onClick={()=> {
+        let password = prompt('Please enter password');
+        if(password==='enterpassword'){
+          downloadFile()
+        }
+         else{
+          alert('password not match')
+         }
+        }}
       style={{ cursor: "pointer", margin: 5, padding: 8 }}
       whileHover={{ backgroundColor: "#d73b3e"}}
       transition={{ duration: 1 }}

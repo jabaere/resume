@@ -1,4 +1,4 @@
-import { createContext, useState} from "react";
+import { createContext, useState,useEffect} from "react";
 
 interface IThemeContext {
   hexColorOne: string;
@@ -9,6 +9,7 @@ interface IThemeContext {
   handleColorTwo?: (e: string) => void;
   reloadAndSave?: () => void;
   reset?: () => void;
+  resize:boolean
 }
 
 const defaultState = {
@@ -16,6 +17,7 @@ const defaultState = {
   hexColorTwo: "",
   color1: localStorage.getItem("hexColorOne") || "#101820FF",
   color2: localStorage.getItem("hexColorTwo") || "#20A161",
+  resize:false
 };
 
 const ThemeContext = createContext<IThemeContext>(defaultState);
@@ -25,7 +27,11 @@ export const ThemeProvider = (props: any) => {
   const [hexColorTwo, setHexColorTwo] = useState(defaultState.hexColorTwo);
   const [color1, setColor1] = useState(defaultState.color1);
   const [color2, setColor2] = useState(defaultState.color2);
-  
+  const [resize,setResize] = useState(defaultState.resize)
+
+  useEffect(()=> {
+    window.addEventListener('resize', () => setResize(true))
+  })
 
   const handleColorOne = (color: string) => {
     setHexColorOne(color);
@@ -63,6 +69,7 @@ export const ThemeProvider = (props: any) => {
         reset,
         color1,
         color2,
+        resize
       }}
     >
       {props.children}

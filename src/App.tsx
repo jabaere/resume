@@ -15,6 +15,7 @@ function App() {
   const location = useLocation();
   const { color1, color2 } = useContext(ThemeContext);
 
+
   return (
     <ThemeProvider>
       <div

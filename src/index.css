@@ -161,7 +161,10 @@ button{
   text-align:center
 }
 
-
+.hide{
+  text-shadow: 0 0 8px #000;
+  color: transparent
+}
 
 /* -----cv----- */
 
