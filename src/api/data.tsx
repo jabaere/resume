@@ -31,6 +31,12 @@
    export const projects = [
     {
       year:2022,
+      name:'Landing Page',
+      techniques:'React/AOS/Typescript',
+      source:'https://github.com/jabaere/tvlandingpage'
+    },
+    {
+      year:2022,
       name:'AI-9 openai',
       techniques:'NextJS/React Three Fiber/Framer-motion',
       source:'https://github.com/jabaere/AI-9'
@@ -182,6 +188,7 @@
     ]
 
 export const links = [
+  'https://tvlandingpage.vercel.app/',
   'https://ai9.vercel.app/',
   'https://statistic-six.vercel.app/',
   'https://findfriends.vercel.app/',
