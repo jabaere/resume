@@ -9,7 +9,8 @@ interface IThemeContext {
   handleColorTwo?: (e: string) => void;
   reloadAndSave?: () => void;
   reset?: () => void;
-  resize:boolean
+  resize:any;
+  windowWidth:number
 }
 
 const defaultState = {
@@ -17,7 +18,8 @@ const defaultState = {
   hexColorTwo: "",
   color1: localStorage.getItem("hexColorOne") || "#101820FF",
   color2: localStorage.getItem("hexColorTwo") || "#20A161",
-  resize:false
+  resize: localStorage.getItem('resize') || false,
+  windowWidth:window.innerWidth
 };
 
 const ThemeContext = createContext<IThemeContext>(defaultState);
@@ -28,10 +30,18 @@ export const ThemeProvider = (props: any) => {
   const [color1, setColor1] = useState(defaultState.color1);
   const [color2, setColor2] = useState(defaultState.color2);
   const [resize,setResize] = useState(defaultState.resize)
+  const [windowWidth,setWindowWidth] = useState(defaultState.windowWidth)
 
   useEffect(()=> {
     window.addEventListener('resize', () => setResize(true))
-  })
+    console.log(window.innerWidth)
+    if(windowWidth > window.innerWidth){
+      setResize(true)
+      localStorage.setItem('resize',JSON.stringify(true))
+    }
+    const resiz = localStorage.getItem('resize')|| resize
+    setResize(resiz)
+  },[])
 
   const handleColorOne = (color: string) => {
     setHexColorOne(color);
@@ -69,7 +79,8 @@ export const ThemeProvider = (props: any) => {
         reset,
         color1,
         color2,
-        resize
+        resize,
+        windowWidth
       }}
     >
       {props.children}

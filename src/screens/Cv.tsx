@@ -18,10 +18,12 @@ export const Cv = () => {
   const hideNumRef = useRef<HTMLDivElement>(null)
   const hideAddr = useRef<HTMLDivElement>(null)
   useEffect(()=> {
+      
    
     if(resize && hideNumRef.current!==null && hideAddr.current!==null){
       hideNumRef.current.innerHTML = 'blablabla'
       hideAddr.current.innerHTML = 'blablabla'
+      localStorage.setItem('resize',JSON.stringify(true))
     }
   },[resize])
   const container = {
