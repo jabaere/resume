@@ -10,6 +10,7 @@ import { Header } from "./components/Header";
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "./context/ThemeContext";
 import ThemeContext from "./context/ThemeContext";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const location = useLocation();
@@ -35,6 +36,7 @@ function App() {
             <Route key="play" path="/play" element={<Dashboard />} />
           </Routes>
         </AnimatePresence>
+        <Analytics />
       </div>
     </ThemeProvider>
   );
