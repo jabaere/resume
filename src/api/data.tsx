@@ -194,7 +194,7 @@ export const links = [
   'https://findfriends.vercel.app/',
   'https://snack.expo.dev/@jabaere/github.com-jabaere-longstayvilla',
   'https://jabaere.github.io/my-portfolio/',
-  'https://mernshortener.herokuapp.com/',
+  'https://web-production-e265.up.railway.app/',
   'https://jabaere.github.io/regform/',
   'https://surveyformla.herokuapp.com/',
   'https://jabaere.github.io/urlShortener/',
