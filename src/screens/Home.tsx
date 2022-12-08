@@ -64,6 +64,7 @@ export const Home = () => {
       animate="visible"
       exit="exit"
     >
+      <img src="https://www.codewars.com/users/jabjab/badges/micro"/>
       <motion.div
         id="home_title"
         animate={{ fontSize: 50, color: "#f8e112" }}
