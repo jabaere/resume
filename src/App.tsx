@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext,useEffect} from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import "./index.css";
 import { Home } from "./screens/Home";
@@ -11,6 +11,12 @@ import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "./context/ThemeContext";
 import ThemeContext from "./context/ThemeContext";
 import { Analytics } from '@vercel/analytics/react';
+import ReactGA from 'react-ga';
+ReactGA.initialize('G-0X3MMYWTG4');
+
+useEffect(() => {
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}, []);
 
 function App() {
   const location = useLocation();
