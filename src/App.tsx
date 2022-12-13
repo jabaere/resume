@@ -14,14 +14,14 @@ import { Analytics } from '@vercel/analytics/react';
 import ReactGA from 'react-ga';
 ReactGA.initialize('G-0X3MMYWTG4');
 
-useEffect(() => {
-  ReactGA.pageview(window.location.pathname + window.location.search);
-}, []);
+
 
 function App() {
   const location = useLocation();
   const { color1, color2 } = useContext(ThemeContext);
-
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <ThemeProvider>
