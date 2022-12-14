@@ -11,17 +11,21 @@ import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "./context/ThemeContext";
 import ThemeContext from "./context/ThemeContext";
 import { Analytics } from '@vercel/analytics/react';
-import ReactGA from 'react-ga';
-ReactGA.initialize('G-BS7Y6JCR44');
-
+import * as analytics from './ga4'
 
 
 function App() {
   const location = useLocation();
   const { color1, color2 } = useContext(ThemeContext);
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
+  
+  React.useEffect(() => {
+    analytics.init()
+  }, [])
+
+  React.useEffect(() => {
+    const path = location.pathname + location.search
+    analytics.sendPageview(path)
+  }, [location])
 
   return (
     <ThemeProvider>
