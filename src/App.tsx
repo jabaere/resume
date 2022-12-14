@@ -12,7 +12,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import ThemeContext from "./context/ThemeContext";
 import { Analytics } from '@vercel/analytics/react';
 import ReactGA from 'react-ga';
-ReactGA.initialize('G-0X3MMYWTG4');
+ReactGA.initialize('G-BS7Y6JCR44');
 
 
 
